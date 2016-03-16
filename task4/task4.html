@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task4</title>
+    <style>
+        #main{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 200px;
+            background-color: #ccc;
+            overflow: hidden;
+            transform: translate(-50%,-50%);
+        }
+        #left-top{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: #fc0;
+            left: -50px;
+            top: -50px;
+        }
+        #right-bottom{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: #fc0;
+            right: -50px;
+            top: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <div style="position: relative;">
+        <div id="left-top"></div>
+        <div id="right-bottom"></div>
+            </div>
+    </div>
+</body>
+</html>
