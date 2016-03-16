@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .sub{
+            border: 1px solid #f00;
+            width: 150px;
+            margin: 20px;
+        }
+        .sub1{
+            height: 120px;
+        }
+        .sub2{
+            height: 100px;
+        }
+        .sub3{
+            height: 40px;
+        }
+        .sub4{
+            height: 200px;
+            border: 1px solid #0f0;
+        }
+        @media screen and (max-width: 640px) {
+            #container{
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .sub4{
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="sub sub1"></div>
+        <div class="sub sub2"></div>
+        <div class="sub sub3"></div>
+        <div class="sub sub4"></div>
+    </div>
+</body>
+</html>

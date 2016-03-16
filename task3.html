@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>task3_3columns</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #main{
+        width: 97.5%;
+        margin: 20px 1.25%;
+        background-color: #eee;
+        border: 1px solid #999;
+    }
+    #left{
+        width: 200px;
+        background-color: white;
+        border: 1px solid #999;
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -98.75%;
+        min-height:50px;
+    }
+    #left img{
+        float: left;
+        margin: 20px;
+        height: 80px;
+        border: 1px solid #999;
+    }
+    #right{
+        width: 120px;
+        background-color: white;
+        border: 1px solid #999;
+        float: left;
+        margin-left: -140px;
+        min-height:50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #right img{
+        margin: 10px 19px;
+        height: 80px;
+        border: 1px solid #999;
+    }
+    #medium{
+        margin: 20px 1.25%;
+        float: left;
+        min-height:50px;
+        width: 97.5%;
+    }
+    #sub_medium{
+        margin-left:220px;
+        margin-right:140px;
+        min-height:50px;
+        background-color: white;
+        border: 1px solid #999;
+        padding: 20px;
+    }
+    .clearfix{
+        clear: both;
+    }
+</style>
+<body>
+    <div id="main">
+        <div id="medium">
+            <div id="sub_medium">
+                medium
+            </div>
+        </div>
+        <div id="left">
+            <img src="http://img.wochacha.com/tb/2016/0310/feedback.jpg">
+        </div>
+        <div id="right">
+            <img src="http://img.wochacha.com/tb/2016/0310/feedback.jpg">
+            <img src="http://img.wochacha.com/tb/2016/0310/feedback.jpg">
+            <img src="http://img.wochacha.com/tb/2016/0310/feedback.jpg">
+            <img src="http://img.wochacha.com/tb/2016/0310/feedback.jpg">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
