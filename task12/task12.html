@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        td,th{
+            border: 1px solid #c8c8c8;
+        }
+        tr{
+            color: red;
+        }
+        tr:nth-of-type(odd){
+            background-color: grey;
+        }
+        tr:nth-of-type(n+5){
+            color: black;
+        }
+        tr:first-child{
+            background-color: black;
+            color: white;
+        }
+        #test{
+            transition: 2s;
+            width: 250px;
+        }
+        #test:focus{
+            width: 500px;
+            border: 1px solid lightblue;
+            box-shadow: 0px 0px 10px lightblue;
+
+        }
+
+        #slidercontainer{
+            margin: 20px;
+            width: 320px;
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+        #slidercontainer img{
+            width: 320px;
+            height: 100%;
+        }
+        ul{
+            width: 1280px;
+            height: 100%;
+            position: relative;
+            list-style: none;
+            -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+            -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+            -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        li{
+            float: left;
+        }
+         input[type=radio] {
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            z-index: 100;
+            visibility: hidden;
+        }
+
+         label {
+            position: absolute;
+            left: 50%;
+            bottom: 50px;
+            z-index: 100;
+            width: 12px;
+            height: 12px;
+            background-color:#ccc;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+            -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+            box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+            -webkit-transition: background-color .2s;
+            -moz-transition: background-color .2s;
+            -o-transition: background-color .2s;
+            transition: background-color .2s;
+        }
+         input[type=radio]#control1:checked~label[for=control1] { background-color: #333; }
+         input[type=radio]#control2:checked~label[for=control2] { background-color: #333; }
+        input[type=radio]#control3:checked~label[for=control3] { background-color: #333; }
+        input[type=radio]#control4:checked~label[for=control4] { background-color: #333; }
+         label[for=control1] { margin-left: -36px; }
+        label[for=control2] { margin-left: -18px; }
+         label[for=control4] { margin-left: 18px; }
+         input[type=radio]#control1:checked~#slidercontainer>ul { left: 0; }
+        input[type=radio]#control2:checked~#slidercontainer>ul { left: -320px; }
+         input[type=radio]#control3:checked~#slidercontainer>ul { left: -640px; }
+         input[type=radio]#control4:checked~#slidercontainer>ul { left: -960px; }
+
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>排名</th>
+            <td>网站</td>
+            <td>热度</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>frontend</td>
+            <td>12000</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>frontend</td>
+            <td>11000</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>frontend</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>frontend</td>
+            <td>9000</td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td>frontend</td>
+            <td>8000</td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td>frontend</td>
+            <td>7000</td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td>frontend</td>
+            <td>6000</td>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td>frontend</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <th>9</th>
+            <td>frontend</td>
+            <td>4000</td>
+        </tr>
+    </table>
+<hr>
+<input type="text" value="test" id="test">
+
+
+    <input type="radio" id="control1" name="controls" checked="checked"/>
+    <label for="control1"></label>
+    <input type="radio" id="control2" name="controls"/>
+    <label for="control2"></label>
+    <input type="radio" id="control3" name="controls"/>
+    <label for="control3"></label>
+    <input type="radio" id="control4" name="controls"/>
+    <label for="control4"></label>
+<div id="slidercontainer">
+    <ul>
+        <li><img src="http://www.blogohblog.com/labs/css3-slider/images/2.jpg"></li>
+        <li><img src="http://www.blogohblog.com/labs/css3-slider/images/1.jpg"></li>
+        <li><img src="http://www.blogohblog.com/labs/css3-slider/images/3.jpg"></li>
+        <li><img src="http://www.blogohblog.com/labs/css3-slider/images/5.jpg"></li>
+    </ul>
+</div>
+
+</body>
+</html>
