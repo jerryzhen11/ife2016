@@ -26,8 +26,11 @@ function addAqiData() {
     }else if(!reg_value.test(value)){
         alert("指数必须为数字");
     }else{
-        aqiData[key]=value;
-        num++;
+        if(!aqiData.hasOwnProperty(key)) {
+            num++;
+        }
+        aqiData[key] = value;
+
     }
 }
 
@@ -68,7 +71,7 @@ function init() {
     $('#add-btn').on('click',function(){
       addBtnHandle();
     });
-    $('#aqi-table').on('click','.del',function(){
+    $('.del').live('click',function(){
         var no=$(this).attr('num');
         delBtnHandle(no);
     });
