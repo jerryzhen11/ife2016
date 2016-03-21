@@ -1,0 +1,25 @@
+@import "compass/reset";
+@import "compass/css3";
+
+
+#page{
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  header{
+    background-color: rgb(145,212,218);
+    width: 95%;
+    color: white;
+    font-family: "Microsoft Yahei", simhei, "宋体";
+    padding: 5% 2.5%;
+    text-align: center;
+    position: relative;
+    span{
+      float: left;
+      margin-bottom: 2.5%;
+    }
+    span:before{
+      content: '<';
+    }
+  }
+}
