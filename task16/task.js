@@ -10,15 +10,15 @@
  * };
  */
 var aqiData = {};
-var num=0;
+var num=-1;
 
 /**
  * 从用户输入中获取数据，向aqiData中增加一条数据
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-    var key=$('#aqi-city-input').val();
-    var value=$('#aqi-value-input').val();
+    var key= $.trim($('#aqi-city-input').val());
+    var value= $.trim($('#aqi-value-input').val());
     var reg_key=/^[A-Za-z\u4e00-\u9fa5]{0,}$/;
     var reg_value=/^[0-9]{0,}$/;
     if(!reg_key.test(key)){
@@ -27,11 +27,8 @@ function addAqiData() {
         alert("指数必须为数字");
     }else{
         aqiData[key]=value;
+        num++;
     }
-    console.log(aqiData);
-
-
-
 }
 
 /**
@@ -52,7 +49,6 @@ function renderAqiList() {
  */
 function addBtnHandle() {
     addAqiData();
-    num++;
     renderAqiList();
 }
 
